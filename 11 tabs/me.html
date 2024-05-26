@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <style>
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  /* background: grey; */
+  /* color: var(--clr-grey-1); */
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: "open Sans", sans-serif;
+}
+
+h2 {
+    font-size: 2.5rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  
+.btn:hover {
+  color: white;
+  background: black;
+}
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.title p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-img {
+  margin-bottom: 2rem;
+}
+.about-img img {
+  border-radius: 25px;
+}
+
+@media screen and (min-width: 992px) {
+  .about-img {
+    margin-bottom: 0;
+  }
+
+  .about-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.tab-btn {
+  padding: 1rem;
+  border: none;
+  text-transform: capitalize;
+}
+
+.about-content {
+  padding: 2rem 1.5rem;
+}
+.content {
+  display: none;
+}
+.tab-btn.active {
+  background: white ;
+}
+.content.active {
+  display: block;
+}
+
+</style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="title">
+        <h2>about</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+          aperiam!
+        </p>
+      </div>
+
+      <div class="about-center section-center">
+        <article class="about-img">
+          <img src="flower.avif" alt="" />
+        </article>
+        <article class="about">
+          <div class="btn-container">
+            <button class="tab-btn active" data-id="history">history</button>
+            <button class="tab-btn" data-id="vision">vision</button>
+            <button class="tab-btn" data-id="goals">goals</button>
+          </div>
+          <div class="about-content">
+            <div class="content active" id="history">
+              <h4>history</h4>
+              <p>
+                I'm baby wolf pickled schlitz try-hard normcore marfa man bun
+                mumblecore vice pop-up XOXO lomo kombucha glossier bicycle
+                rights. Umami kinfolk salvia jean shorts offal venmo. Knausgaard
+                tilde try-hard, woke fixie banjo man bun. Small batch tumeric
+                mustache tbh wayfarers 8-bit shaman chartreuse tacos. Viral
+                direct trade hoodie ugh chambray, craft beer pork belly flannel
+                tacos single-origin coffee art party migas plaid pop-up.
+              </p>
+            </div>
+           
+            <div class="content" id="vision">
+              <h4>vision</h4>
+              <p>
+                Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth
+                crucifix offal deep v hella biodiesel. Church-key listicle
+                polaroid put a bird on it chillwave palo santo enamel pin,
+                tattooed meggings franzen la croix cray. Retro yr aesthetic four
+                loko tbh helvetica air plant, neutra palo santo tofu mumblecore.
+                Hoodie bushwick pour-over jean shorts chartreuse shabby chic.
+                Roof party hammock master cleanse pop-up truffaut, bicycle
+                rights skateboard affogato readymade sustainable deep v
+                live-edge schlitz narwhal.
+              </p>
+              <ul>
+                <li>list item</li>
+                <li>list item</li>
+                <li>list item</li>
+              </ul>
+            </div>
+            <div class="content" id="goals">
+              <h4>goals</h4>
+              <p>
+                Chambray authentic truffaut, kickstarter brunch taxidermy vape
+                heirloom four dollar toast raclette shoreditch church-key.
+                Poutine etsy tote bag, cred fingerstache leggings cornhole
+                everyday carry blog gastropub. Brunch biodiesel sartorial mlkshk
+                swag, mixtape hashtag marfa readymade direct trade man braid
+                cold-pressed roof party. Small batch adaptogen coloring book
+                heirloom. Letterpress food truck hammock literally hell of wolf
+                beard adaptogen everyday carry. Dreamcatcher pitchfork yuccie,
+                banh mi salvia venmo photo booth quinoa chicharrones.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <script>
+        const about = document.querySelector(".about");
+const btns = document.querySelectorAll(".tab-btn");
+const articles = document.querySelectorAll(".content");
+about.addEventListener("click", function (e) {
+  const id = e.target.dataset.id;
+  if (id) {
+    btns.forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    articles.forEach(function (article) {
+      article.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
+  }
+});
+
+    </script>
+  </body>
+</html>

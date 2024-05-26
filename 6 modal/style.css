@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background: url('house.avif') no-repeat center center fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.first {
+    background: rgb(185, 185, 231);
+    padding: 4rem;
+    text-align: center;
+    border-radius: 8px;
+    width: 500px; 
+}
+
+.btn {
+    background: rgb(110, 110, 172);
+    color: #fff;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 3%;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.open-modal {
+    display: flex;
+}
+
+.modal-container {
+    background: #fff;
+    padding: 2rem;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.close-btn {
+    /* background: transparent; */
+    background: red;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}

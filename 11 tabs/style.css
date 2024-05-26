@@ -1,0 +1,161 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.section-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.about-img,
+.about {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-box, .about-content {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    background: #f1f5f8;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.tab-btn.active {
+    background: #333;
+    color: #fff;
+}
+
+.about-content .content {
+    display: none;
+}
+
+.about-content .content.active {
+    display: block;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2, #start {
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    letter-spacing: 1.5px;
+    margin-left: 19px;
+    margin-top: 11px;
+}
+
+p {
+    letter-spacing: 0.5px;
+    margin: 5px 20px 0px 20px;
+    color: black;
+}
+
+#start {
+    color: black;
+}
+
+.center {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-box {
+    height: 310px;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-left: 70px;
+    flex: 1;
+}
+
+.first {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.second {
+    height: 310px;
+    margin-top: 48px;
+    border-radius: 20px;
+    box-shadow: 10px 5px 30px 0.5px black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tab {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: #f1f5f8;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.tab-btn.active {
+    background: #333;
+    color: #fff;
+}
+
+.about-content .content {
+    display: none;
+}
+
+.about-content .content.active {
+    display: block;
+}
+
+.content {
+    background-color: white;
+}
+

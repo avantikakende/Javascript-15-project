@@ -1,0 +1,203 @@
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #0a0303;
+}
+
+.section p {
+  color: #fff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 2.6;
+}
+
+#nav {
+  background: rgb(223, 171, 179);  
+  padding: 1em 0;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+}
+
+.nav-toggle {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.links-container {
+  display: flex;
+}
+
+.links {
+  display: flex;
+}
+
+.links li {
+  margin-right: 1rem;
+}
+
+.links a {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.links a:hover {
+  color: rgb(153, 229, 229);
+}
+
+.banner {
+  background: url('wallpaper.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 20rem 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 40px;
+}
+
+#about, #services, #tours {
+  background-color: rgb(223, 237, 241);
+  padding: 10rem 0;
+  text-align: left;
+  margin-top: 2rem; /* Set the top margin here */
+  display: flex;
+  justify-content: center;
+}
+
+#services {
+  background-color: white;
+}
+
+.section {
+  padding: 10rem 0;
+  margin-top: 2rem; /* Ensure this margin-top is applied */
+}
+
+.title {
+  margin-top: 20px;
+}
+
+.title h2 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+}
+
+.title h2 span {
+  color: rgb(14, 85, 167);
+}
+
+.title h2::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  bottom: -10px;
+  left: 25%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 3rem;
+  border: 2px solid #fff;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+.btn-white {
+  color: white;
+  border-color: #fff;
+}
+
+.btn-white:hover {
+  background: white;
+  color: #6a6868;
+}
+
+footer {
+  background: rgb(30, 30, 77);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  font-size: 40px;
+}
+
+#date {
+  color: rgb(200, 200, 235);
+}
+
+.top-link {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #333;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: none;
+  transition: all 0.3s linear;
+}
+
+.top-link:hover {
+  color: #333;
+}
+
+.top-link i {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .links-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  .links {
+    flex-direction: column;
+  }
+  .links a {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  .nav-toggle.active + .links-container {
+    display: flex;
+  }
+}

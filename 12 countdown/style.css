@@ -1,0 +1,59 @@
+ body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #ebebf3;
+    font-size: 30px;
+  }
+  
+  h1{
+    color: rgb(17, 99, 175);
+  }
+  
+  .giveaway-container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0rem;
+  }
+  
+  .giveaway-image {
+    width: 900px; 
+    margin: auto 5rem; 
+  }
+  
+  .countdown-item {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  #days-box {
+    background-color: rgb(89, 70, 172);
+  }
+  
+  #hours-box {
+    background-color: rgb(89, 70, 172);
+  }
+  
+  #minutes-box {
+    background-color: rgb(89, 70, 172);
+  }
+  
+  #seconds-box {
+    background-color: rgb(89, 70, 172);
+  }
+  
+  .countdown-item span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+ 
+  
+
